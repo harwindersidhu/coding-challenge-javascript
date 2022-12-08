@@ -19,7 +19,7 @@ function ThreeSum(arr) {
   for (let i = 1; i < arr.length; i++) {
     for (let j = 1; j < arr.length; j++) {
       for (let k = 1; k < arr.length; k++) {
-        if (i !== j && 1 !== k && j !== k) {
+        if (i !== j && i !== k && j !== k) {
           if ((arr[i] + arr[j] + arr[k]) === requiredSum) {
             return true;
           }
