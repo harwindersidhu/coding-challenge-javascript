@@ -12,13 +12,8 @@ function diagonalDifference(arr) {
   let leftDiagonalSum = 0;
   let rightDiagonalSum = 0;
   for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr[0].length; j++) {
-      if (i === j) {
-        leftDiagonalSum += arr[i][j];
-        const reverseArray = arr[i].reverse();
-        rightDiagonalSum += reverseArray[j];
-      }
-    }
+    leftDiagonalSum += arr[i][i];
+    rightDiagonalSum += arr[i][arr.length - i - 1];
   }
 
   return Math.abs(leftDiagonalSum - rightDiagonalSum);
